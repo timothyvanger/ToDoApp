@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;900&display=swap");
+* {
+  font-size: 16px;
+  font-family: "Gabarito", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(198, 224, 196);
+  transition: all 0.5s ease;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.45);
+  height: 8vh;
+}
+header h1 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.filter-container {
+  background-color: aqua;
+  height: 5vh;
+}
+.todo-list-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem 1rem;
+  padding: 1.5rem;
+}
+.todo-label {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid black;
+}
+.todo-card {
+  background-color: rgb(129, 209, 179);
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  animation: fadein 0.45s ease;
+}
+@keyframes fadein {
+  0% {
+    transform: scale(1);
+    transform: rotate(15deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(8deg);
+    transform: scale(1.1);
+  }
+  100% {
+    transform: rotate(0);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.todo-card:hover {
+  box-shadow: 0px 0px 31px -10px rgba(68, 75, 98, 0.51);
+  transform: scale(1.025);
+}
+.todo-description {
+  background-color: rgb(120, 180, 146);
+  border-radius: 0px 0px 0.75rem 0.75rem;
+  padding: 0.5rem;
+  margin: 0;
+  flex-grow: 1;
+  word-wrap: normal;
+  word-break: normal;
+  transition: all 0.6s ease;
+}
+.todo-title {
+  flex-grow: 1;
+}
+.moreOptions {
+  justify-self: flex-end;
+  align-self: center;
+  background-color: rgb(207, 241, 207);
+  outline: none;
+  border: 1px solid rgb(140, 179, 140);
+  border-radius: 0 0 0.3rem 0.3rem;
+  transition: all 0.3s ease;
+}
+.moreOptions:hover {
+  background-color: rgb(134, 179, 134);
+  color: white;
+}
+.moreOptions:active {
+  margin-top: 8px;
+}
+.priorityBtn {
+  background-color: #eb5959;
+  width: 10px;
+  height: 25px;
+  outline: none;
+  border: none;
+  border-radius: 0 0 0.2rem 0.2rem;
+  transition: all 0.3s ease;
+}
+.priorityBtn:hover {
+  background-color: #c64444;
+  transform: translateY(10%);
+}

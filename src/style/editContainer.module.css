@@ -1,0 +1,52 @@
+.editContainer {
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.editForm {
+  background-color: white;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: auto;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+.saveBtn {
+  background-color: rgba(165, 241, 165, 0.923);
+  border-radius: 0.3rem;
+  width: 70px;
+  height: 30px;
+  outline: none;
+  border: 1px solid rgba(129, 205, 129, 0.923);
+  transition: all 0.4s ease;
+}
+.cancelBtn {
+  background-color: rgba(241, 165, 165, 0.923);
+  border-radius: 0.3rem;
+  width: 70px;
+  height: 30px;
+  outline: none;
+  border: 1px solid rgba(196, 115, 115, 0.923);
+  transition: all 0.4s ease;
+}
+.cancelBtn:hover,
+.saveBtn:hover {
+  transform: scale(1.06);
+}
+.cancelBtn:active {
+  background-color: rgba(155, 83, 83, 0.923);
+}
+.saveBtn:active {
+  background-color: rgba(94, 168, 94, 0.923);
+}
